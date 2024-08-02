@@ -1,0 +1,19 @@
+.vertical-borders td,
+.vertical-borders th {
+    border-right: var(--lwc-borderWidthThin, 1px) solid black;
+    border-left: var(--lwc-borderWidthThin, 1px) solid black;
+}
+
+.horizontal-borders td,
+.horizontal-borders th {
+    border-top: var(--lwc-borderWidthThin, 1px) solid black;
+    border-bottom: var(--lwc-borderWidthThin, 1px) solid black;
+}
+
+.bg-color-green {
+    background-color: #abeead; /* Light green background color */
+}
+/* .vertical-borders td:last-child,
+.vertical-borders th:last-child {
+    border-right: none;
+} */

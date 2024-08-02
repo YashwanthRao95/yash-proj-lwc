@@ -1,0 +1,30 @@
+<template>
+    <div class="slds-grid slds-grid_vertical">
+        <div class="slds-col">
+            <lightning-card title="Child Component">
+                <p class="slds-p-horizontal_small">
+                    The value from the parent component using @api: <b style="font-size: 3rem">{passedVal}</b>
+                </p>
+                <p class="slds-p-around_small">
+                    <b style="font-size: 1.25rem">{textInserted}</b>
+                </p>
+            </lightning-card>
+            <lightning-card title="Child to Parent Communication" icon-name="standard:lead">
+                <lightning-button-group class="slds-p-around_small">
+                    <lightning-button label="Increase Counter" name="increase" onclick={counterChange}></lightning-button>
+                    <lightning-button label="Decrease Counter" name="decrease" onclick={counterChange}></lightning-button>
+                </lightning-button-group>
+            </lightning-card>
+        </div>
+        <div class="slds-col">
+            <lightning-layout horizontal-align="space" style="background-color: #fff;" class="slds-p-top_x-small">
+                <lightning-layout-item class="slds-p-left_small">
+                    This is footer embedded in child!
+                </lightning-layout-item>
+                <lightning-layout-item class="slds-p-left_small">
+                    <slot name="footer">This is the place for slot from parent!</slot>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+    </div>
+</template>

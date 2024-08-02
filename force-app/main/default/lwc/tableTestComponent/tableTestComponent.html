@@ -1,0 +1,98 @@
+<template>
+    <div class="slds-box slds-theme_default">
+        <table class="slds-table slds-table_cell-buffer horizontal-borders vertical-borders">
+            <!-- Table Head -->
+            <thead>
+                <tr class="slds-text-title_caps">
+                    <th scope="col" colspan="3" class="slds-text-align_center">
+                        <div class="slds-truncate" title="USDA FOOD INFORMATION">4. USDA FOOD INFORMATION</div>
+                    </th>
+                    <th scope="col" colspan="3" class="slds-text-align_center">
+                        <div class="slds-truncate" title="INVENTORY">5. INVENTORY</div>
+                    </th>
+                    <th scope="col" colspan="1" rowspan="2" class="slds-text-align_center">
+                        <div class="slds-truncate" title="WISCM SALES ORDER#">6. WISCM SALES <br>ORDER#</div>
+                    </th>
+                    <th scope="col" colspan="1" rowspan="2" class="slds-text-align_center">
+                        <div class="slds-truncate" title="DATE RECIEVED">7. DATE <br>RECIEVED</div>
+                    </th>
+                    <th scope="col" colspan="1" rowspan="2" class="slds-text-align_center">
+                        <div class="slds-truncate" title="TOTAL INVENTORY AVAILABLE">8. TOTAL <br>INVENTORY <br>AVAILABLE <br><br>SUM(5A+5B+5C)</div>
+                    </th>
+                </tr>
+                <tr class="slds-text-title_caps">
+                    <th scope="col" colspan="1" class="slds-text-align_center">
+                        <div class="slds-truncate" title="SHORT TITLE">A. SHORT TITLE</div>
+                    </th>
+                    <th scope="col" colspan="1" class="slds-text-align_center">
+                        <div class="slds-truncate" title="WISCM Material Number">B. WISCM<br> Material <br>Number</div>
+                    </th>
+                    <th scope="col" colspan="1" class="slds-text-align_center">
+                        <div class="slds-truncate" title="PACK SIZE">C. PACK SIZE</div>
+                    </th>
+                    <th scope="col" colspan="1" class="slds-text-align_center">
+                        <div class="slds-truncate" title="BEGINNING INVENTORY">A. BEGINNING <br>INVENTORY</div>
+                    </th>
+                    <th scope="col" colspan="1" class="slds-text-align_center">
+                        <div class="slds-truncate" title="NEW RECEIPTS">B. NEW RECEIPTS</div>
+                    </th>
+                    <th scope="col" colspan="1" class="slds-text-align_center">
+                        <div class="slds-truncate" title="TRANSFER IN">C. TRANSFER IN</div>
+                    </th>
+                </tr>
+            </thead>
+            <!-- Table Body -->
+            <tbody>
+                <template for:each={data} for:item="record">
+                    <tr key={record.id} class="slds-text-align_center">
+                        <td rowspan="4" colspan="1"><b>{record.name}</b></td>
+                        <td rowspan="4" colspan="1">7137891</td>
+                        <td rowspan="4" colspan="1">24/15 5 oz can</td>
+                        <td colspan="1">1045</td>
+                        <td colspan="1">0</td>
+                        <td colspan="1">0</td>
+                        <td colspan="1">111</td>
+                        <td colspan="1">222</td>
+                        <td colspan="1">1645</td>
+                    </tr>
+                    <tr key={record.id} class="slds-text-align_center">
+                        <td  colspan="1">2040</td>
+                        <td  colspan="1">0</td>
+                        <td  colspan="1">0</td>
+                        <td  colspan="1">37284</td>
+                        <td  colspan="1">38422</td>
+                        <td  colspan="1">2040</td>
+                    </tr>
+                    <tr key={record.id} class="slds-text-align_center">
+                        <td  colspan="1">2040</td>
+                        <td  colspan="1">0</td>
+                        <td  colspan="1">0</td>
+                        <td  colspan="1">37284</td>
+                        <td  colspan="1">38422</td>
+                        <td  colspan="1">2040</td>
+                    </tr>
+                    <tr key={record.id} class="slds-text-align_center">
+                        <td  colspan="1">2040</td>
+                        <td  colspan="1">0</td>
+                        <td  colspan="1">0</td>
+                        <td  colspan="1">37284</td>
+                        <td  colspan="1">38422</td>
+                        <td  colspan="1">2040</td>
+                    </tr>
+                    <tr key={record.id} class="slds-text-align_center">
+                        <td colspan="1" class="bg-color-green"><b>TOTAL</b></td>
+                        <td colspan="1" class="bg-color-green">7137891</td>
+                        <td colspan="1" class="bg-color-green">24/15 5 oz can</td>
+                        <td colspan="1" class="bg-color-green">1045</td>
+                        <td colspan="1" class="bg-color-green">0</td>
+                        <td colspan="1" class="bg-color-green">0</td>
+                        <td colspan="1" class="bg-color-green">111</td>
+                        <td colspan="1" class="bg-color-green">222</td>
+                        <td colspan="1" class="bg-color-green">1645</td>
+                    </tr>
+                </template>
+
+            </tbody>
+        </table>
+    </div>
+</template>

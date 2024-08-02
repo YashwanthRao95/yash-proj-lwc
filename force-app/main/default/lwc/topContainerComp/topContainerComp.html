@@ -1,0 +1,62 @@
+<template>
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_12-of-12">
+            <article class="slds-card">
+                <div class="slds-grid slds-einstein-header slds-card__header">
+                    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                        <div class="slds-grid slds-grid_vertical-align-center slds-size_3-of-4 slds-medium-size_2-of-3">
+                            <div class="slds-media__body">
+                                <h2 class="slds-truncate" title="Yash Projects">
+                                    <a href="#" class="slds-card__header-link" title="Yash Projects">
+                                        <span class="slds-avatar slds-avatar_circle slds-avatar_large">
+                                            <abbr class="slds-avatar__initials slds-avatar__initials_inverse" title="Person name">{abbrName}</abbr>
+                                        </span>
+                                        <span class="slds-text-heading_large slds-p-left_x-small slds-p-top_x-small">
+                                            {personName}
+                                        </span>
+                                    </a>
+                                    <br/>
+                                    <div class="slds-p-left_xx-large slds-p-top_x-small">
+                                        Salesforce Developer | Master's in Computer Science at Missouri S&T <br/>
+                                        | Salesforce Certified Platform Developer | Expert in Enhancing User Experience through LWC <br/>
+                                        | Passionate about Data Science & Machine Learning
+                                    </div>
+                                </h2>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+                <div class="slds-card__body slds-card__body_inner slds-grid  slds-grid_align-spread slds-has-flexi-truncate slds-wrap">
+                    <div class="slds-col slds-size_4-of-12">
+                        <lightning-combobox
+                            name="selectComp"
+                            label="Select Component Demo"
+                            value={selectedComp}
+                            placeholder="Select Component"
+                            options={options}
+                            onchange={handleCompChange} >
+                        </lightning-combobox>
+                    </div>
+                    <div class="slds-col slds-size_4-of-12 slds-truncate">
+                        <span class="slds-text-heading_small">There are a total of 3 components available in the page to explore</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="slds-col slds-size_12_of_12 slds-p-top_large">
+            <template if:true={parentToChildComp}>
+                <c-parent-comp></c-parent-comp>
+            </template>
+            <template if:true={lmpComp}>
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_6_of_12 slds-p-left_small">
+                        <c-lms-comp-one></c-lms-comp-one>
+                    </div>
+                    <div class="slds-col slds-size_6_of_12 slds-p-left_small">
+                        <c-lms-comp-two></c-lms-comp-two>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

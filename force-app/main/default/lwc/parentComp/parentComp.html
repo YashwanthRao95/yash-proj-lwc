@@ -1,0 +1,34 @@
+<template>
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_3_of_12">
+            <lightning-card title="Parent to Child Communication" icon-name="standard:avatar">
+                <p class="slds-p-horizontal_small">
+                    <lightning-input type="text" name="gptext" placeholder="Enter Text" value={passVal} onchange={handleIpChange}></lightning-input>
+                </p>
+                <p class="slds-p-around_small">
+                    <lightning-layout horizontal-align="space">
+                        <lightning-layout-item>
+                            <lightning-button label="Insert Text in Child" onclick={insertInChild}></lightning-button>
+                        </lightning-layout-item>
+                        <lightning-layout-item>
+                            <lightning-button label="Clear Text in Child" onclick={clearInChild}></lightning-button>
+                        </lightning-layout-item>
+                        <lightning-layout-item>
+                            <lightning-button label="Switch Slot Footer in Child" onclick={switchSlot}></lightning-button>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </p>
+            </lightning-card>
+            <lightning-card title="Parent Component">
+                <span class="slds-p-left_small">The counter being changed from the child using custom event: <b style="font-size: 3rem">{counter}</b></span>
+            </lightning-card>
+        </div>
+        <div class="slds-col slds-size_9_of_12">
+            <c-child-comp passed-val={passVal} oncounterchange={changeInCounter}>
+                <template if:true={slotSwitch}>
+                    <span slot="footer">Custom Footer Content from Parent</span>
+                </template>
+            </c-child-comp>
+        </div>
+    </div>
+</template>
