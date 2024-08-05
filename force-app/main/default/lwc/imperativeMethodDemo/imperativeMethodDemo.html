@@ -1,0 +1,41 @@
+<template>
+    <lightning-card title="Imperative Method">
+        <div class="slds-p-around_small">
+            <lightning-button label="Fetch Account" onclick={fetchAccount}></lightning-button>
+        </div>
+        <div>
+            <template if:true={accountsList}>
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Account ID">Account Id</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Account Name">Account Name</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Industry">Industry</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={accountsList} for:item="acc">
+                            <tr key={acc.Id}>
+                                <td data-label="Account ID">
+                                    <div class="slds-truncate">{acc.Id}</div>
+                                </td>
+                                <td data-label="Account Name">
+                                    <div class="slds-truncate">{acc.Name}</div>
+                                </td>
+                                <td data-label="Industry">
+                                    <div class="slds-truncate">{acc.Industry}</div>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </template>
+        </div>
+    </lightning-card>
+</template>
