@@ -58,5 +58,17 @@
                 </div>
             </template>
         </div>
+        <div class="slds-col slds-size_12_of_12 slds-p-top_large">
+            <template if:true={apexCalls}>
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_6_of_12">
+                        <c-imperative-method-demo></c-imperative-method-demo>
+                    </div>
+                    <div class="slds-col slds-size_6_of_12">
+                        <c-wire-method-demo></c-wire-method-demo>
+                    </div>
+                </div>
+            </template>
+        </div>
     </div>
 </template>

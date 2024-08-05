@@ -22,6 +22,10 @@ export default class TopContainerComp extends LightningElement {
         return this.selectedComp == 'Component 2'
     }
 
+    get apexCalls() {
+        return this.selectedComp == 'Component 3';
+    }
+
     handleCompChange(event) {
         this.selectedComp = event.detail.value;
         console.log('Selected Component --- ', this.selectedComp);
